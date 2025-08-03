@@ -1,0 +1,19 @@
+.navbar-brand {
+    img {
+        width:250px;
+    }
+}
+
+#navbarContent {
+    font-weight: bold;
+}
+
+#navSearch {
+    background-color: white;
+    border:1px solid #00497c;
+
+    &:hover {
+        background-color:#00497c;
+        color:white;
+    }
+}
