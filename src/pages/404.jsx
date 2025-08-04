@@ -1,19 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ErrorImg from '../assets/img/404.png';
+import main from '../styles/main.scss';
+import components from '../styles/components.scss';
+import pages from '../styles/pages.scss';
 
 export default function Error() {
   return (
-    <div className="container text-center not-found-page my-5">
+    <div className="container text-center not-found-page" id="errorContainer">
       <img
         src={ErrorImg}
         alt="404 - Page non trouvée"
-        className="img-fluid mb-4"
+        className="img-fluid"
         style={{ maxWidth: '300px' }}
       />
-      <h1 className="display-4">404</h1>
-      <p className="lead">Oups... Cette page n'existe pas.</p>
-      <Link to="/" className="btn btn-primary mt-3">Retour à l'accueil</Link>
+      <p className="lead mt-3">Oups... Cette page n'existe pas.</p>
+      <Link to="/" className="btn mt-3" id="btnReturn">Retour à l'accueil</Link>
     </div>
   );
 }

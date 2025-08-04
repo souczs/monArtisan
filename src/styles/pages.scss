@@ -2,4 +2,47 @@
     margin-top:100px;
     margin-left:30px;
     margin-right:30px;
+
+    h1 {
+        color:#384050;
+    }
+
+    h3 {
+        color:#00497c;
+        text-transform:uppercase;
+    }
+
+    h4 {
+        font-weight:bold;
+        color:#82b864;
+    }
+
+    h5 {
+        text-transform:uppercase;
+        font-weight:bold;
+        padding-top:15px;
+        padding-bottom:5px;
+    }
+    
+    p {
+        font-style: italic;
+    }
+}
+
+#box-step {
+    background-color: white;
+}
+
+#errorContainer {
+    margin-top:150px;
+}
+
+#btnReturn {
+    background-color: white;
+    border:1px solid #00497c;
+
+    &:hover {
+        background-color:#00497c;
+        color:white;
+    }
 }

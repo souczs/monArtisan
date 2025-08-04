@@ -6,14 +6,15 @@
 
 #navbarContent {
     font-weight: bold;
+    font-size:1.1rem;
 }
 
 #navSearch {
     background-color: white;
-    border:1px solid #00497c;
+    border:1px solid black;
 
     &:hover {
-        background-color:#00497c;
-        color:white;
+        background-color:#82b864;
+        color:black;
     }
 }
