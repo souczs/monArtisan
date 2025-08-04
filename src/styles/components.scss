@@ -38,3 +38,12 @@
 #bloc-category {
     height:50px;
 }
+
+#category-list::after {
+    content: '';
+    display: block;
+    width: 10cm;
+    height: 2px;
+    background-color: #0074c7;
+    margin: 30px auto 0;
+}
