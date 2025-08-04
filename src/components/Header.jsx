@@ -24,16 +24,16 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/artisans/alimentation">Alimentation</NavLink>
+              <NavLink className="nav-link" to="/artisans/Alimentation">Alimentation</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/artisans/batiments">Bâtiments</NavLink>
+              <NavLink className="nav-link" to="/artisans/Bâtiment">Bâtiment</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/artisans/fabrication">Fabrication</NavLink>
+              <NavLink className="nav-link" to="/artisans/Fabrication">Fabrication</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/artisans/services">Services</NavLink>
+              <NavLink className="nav-link" to="/artisans/Services">Services</NavLink>
             </li>
           </ul>
 

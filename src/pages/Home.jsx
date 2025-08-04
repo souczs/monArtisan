@@ -20,7 +20,7 @@ export default function Home() {
             <div className="p-3 border rounded shadow-sm h-100" id="box-home">
               <h4 className="text-center">1</h4>
               <h5 className="text-center">Le secteur</h5>
-              <p className="text-center">Sélectionnez la catégorie souhaitée dans le menu en haut de page</p>
+              <p className="text-center">Sélectionnez la catégorie souhaitée dans le menu en haut de la page</p>
             </div>
           </div>
           <div className="col-md-3">
