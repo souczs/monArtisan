@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import data from '../data/datas.json'; // ou le chemin vers ton fichier JSON
+import data from '../data/datas.json';
 import { FaStar } from 'react-icons/fa';
+import Specialite from '../assets/img/specialite.png';
+import Localisation from '../assets/img/localisation.png';
 
 export default function ArtisansList() {
     // Lecture de la catégorie depuis l'URL
@@ -26,13 +28,12 @@ export default function ArtisansList() {
                 <div className="p-3" id="box-artisans">
                 <h5>{artisan.name}</h5>
                 <p>
-                    Note :
                     {[...Array(5)].map((_, i) => (
                     <FaStar key={i} color={i < Math.round(artisan.note) ? 'gold' : '#ddd'} />
                     ))}
                 </p>
-                <p>Spécialité : {artisan.specialty}</p>
-                <p>Localisation : {artisan.location}</p>
+                <p><img src={Specialite} alt="Logo spécialité" id="box-spec" /> {artisan.specialty}</p>
+                <p><img src={Localisation} alt="Logo localisation" id="box-loc" /> {artisan.location}</p>
                 </div>
             </div>
             ))}

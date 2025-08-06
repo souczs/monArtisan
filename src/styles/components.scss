@@ -24,16 +24,6 @@
     background-color: white;
 }
 
-#btn-top {
-    background-color: white;
-    border:1px solid #82b864;
-    color:#82b864;
-
-    &:hover {
-        background-color:#82b864;
-        color:black;
-    }
-}
 #box-background {
     position: relative;
     background-image: url('../assets/img/artisans.png');
@@ -57,6 +47,14 @@
 
 #box-category {
     height:50px;
+}
+
+#box-spec {
+    width: 20px;
+}
+
+#box-loc {
+    width:20px;
 }
 
 #category-list::after {

@@ -37,12 +37,34 @@
     margin-top:150px;
 }
 
-#btnReturn {
+#btn {
     background-color: white;
-    border:1px solid #00497c;
+    border:1px solid #82b864;
+    color:#82b864;
 
     &:hover {
-        background-color:#00497c;
+        background-color:#82b864;
+        color:black;
+    }
+}
+
+#box-info {
+    h1 {
+        text-transform:uppercase;
+    }
+
+    p a {
+        color:#82b864;
+    }
+}
+
+#btn-submit {
+    background-color: white;
+    border:1px solid #cd2c2e;
+    color:#cd2c2e;
+
+    &:hover {
+        background-color:#cd2c2e;
         color:white;
     }
 }
