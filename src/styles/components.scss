@@ -34,8 +34,28 @@
         color:black;
     }
 }
+#box-background {
+    position: relative;
+    background-image: url('../assets/img/artisans.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 
-#bloc-category {
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 2;
+    }
+
+    > * {
+        position: relative;
+        z-index: 3;
+    }
+}
+
+#box-category {
     height:50px;
 }
 
@@ -44,6 +64,15 @@
     display: block;
     width: 10cm;
     height: 2px;
-    background-color: #0074c7;
+    background-color: #82b864;
     margin: 30px auto 0;
+}
+
+#box-artisans {
+    border-bottom:solid 1px #384050;
+
+    h5 {
+        text-transform: uppercase;
+        font-weight: 800;
+    }
 }

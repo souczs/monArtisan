@@ -11,31 +11,33 @@ export default function ArtisansList() {
   const filteredArtisans = data.filter((artisan) => artisan.category === category);
 
   return (
-    <div className="container my-5">
-    <div id="bloc-category"></div>
-      <h3 className="mt-5 mb-4 text-center" id="category-list">Nos artisans dans le domaine <strong>{category}</strong></h3>
-      <div className="row g-4 mt-3">
-        {filteredArtisans.map((artisan) => (
-          <div
-            className="col-md-12"
-            key={artisan.id}
-            onClick={() => navigate(`/artisan/${artisan.name}`)}
-            style={{ cursor: 'pointer' }}
-          >
-            <div className="p-3 border rounded shadow-sm h-100">
-              <h5>{artisan.name}</h5>
-              <p>
-                Note :
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} color={i < Math.round(artisan.note) ? 'gold' : '#ddd'} />
-                ))}
-              </p>
-              <p>Spécialité : {artisan.specialty}</p>
-              <p>Localisation : {artisan.location}</p>
+    <main id="box-background">
+        <article className="container my-5">
+        <div id="box-category"></div>
+        <h3 className="mt-5 mb-4 text-center" id="category-list">Nos artisans dans le domaine <strong>{category}</strong></h3>
+        <div className="row g-4 mt-3">
+            {filteredArtisans.map((artisan) => (
+            <div
+                className="col-md-12"
+                key={artisan.id}
+                onClick={() => navigate(`/artisan/${artisan.name}`)}
+                style={{ cursor: 'pointer' }}
+            >
+                <div className="p-3" id="box-artisans">
+                <h5>{artisan.name}</h5>
+                <p>
+                    Note :
+                    {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} color={i < Math.round(artisan.note) ? 'gold' : '#ddd'} />
+                    ))}
+                </p>
+                <p>Spécialité : {artisan.specialty}</p>
+                <p>Localisation : {artisan.location}</p>
+                </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+            ))}
+        </div>
+        </article>
+    </main>
   );
 }
