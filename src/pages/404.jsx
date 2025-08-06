@@ -15,7 +15,7 @@ export default function Error() {
         style={{ maxWidth: '300px' }}
       />
       <p className="lead mt-3">Oups... Cette page n'existe pas.</p>
-      <Link to="/" className="btn mt-3" id="btnReturn">Retour à l'accueil</Link>
+      <Link to="/" className="btn mt-3" id="btn">Retour à l'accueil</Link>
     </div>
   );
 }
