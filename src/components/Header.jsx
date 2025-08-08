@@ -51,8 +51,8 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-white bg-white px-4 shadow-sm fixed-top">
-      <div className="container-fluid">
+    <header className="navbar navbar-expand-lg navbar-white bg-white px-4 shadow-sm fixed-top">
+      <nav className="container-fluid">
         <Link className="navbar-brand" to="/">
             <img src={Logo} alt="Logo du site" />
         </Link>
@@ -100,8 +100,8 @@ function Header() {
               </ul>
             )}
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 

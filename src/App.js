@@ -7,18 +7,22 @@ import Home from './pages/Home';
 import Error from './pages/404';
 import ArtisansList from './pages/ArtisansList';
 import ArtisansPage from './pages/ArtisansPage';
+import Footer from './components/Footer';
 
 function App() {
     return (
         <Router>
             <Header />
             <div style={{ height: '120px' }}></div>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="*" element={<Error />} />
-                <Route path="/artisans/:category" element={<ArtisansList />} />
-                <Route path="/artisan/:name" element={<ArtisansPage />} />
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="*" element={<Error />} />
+                    <Route path="/artisans/:category" element={<ArtisansList />} />
+                    <Route path="/artisan/:name" element={<ArtisansPage />} />
+                </Routes>
+            </main>
+            <Footer />
         </Router>
     )
 }
