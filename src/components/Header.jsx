@@ -1,14 +1,53 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Logo from '../assets/img/logo.png';
 import '../styles/components.scss';
+import artisansData from '../data/datas.json';
 
 function Header() {
   const [search, setSearch] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  
+  // 1. Ajoutez le hook useNavigate
+  const navigate = useNavigate();
 
-  const handleSearch = (e) => {
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+
+    if (value.length > 1) {
+      const filteredSuggestions = artisansData.filter(artisan =>
+        (artisan.name?.toLowerCase().includes(value.toLowerCase())) ||
+        (artisan.city?.toLowerCase().includes(value.toLowerCase())) ||
+        (artisan.specialty?.toLowerCase().includes(value.toLowerCase()))
+      );
+      setSuggestions(filteredSuggestions);
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  const handleSearchSubmit = (e) => {
     e.preventDefault();
-    alert(`Recherche : ${search}`);
+    if (search.length > 0) {
+      // Option : trouver le premier résultat et y naviguer
+      const foundArtisan = artisansData.find(artisan => artisan.name.toLowerCase() === search.toLowerCase());
+      if (foundArtisan) {
+        navigate(`/artisan/${foundArtisan.id}`);
+      } else {
+        // Redirection vers une page de résultats complète
+        alert(`Recherche soumise pour : ${search}`);
+      }
+      setSuggestions([]);
+      setSearch('');
+    }
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    navigate(`/artisan/${suggestion.name}`);
+    
+    setSuggestions([]);
+    setSearch(suggestion.name);
   };
 
   return (
@@ -37,17 +76,29 @@ function Header() {
             </li>
           </ul>
 
-          <form className="d-flex" onSubmit={handleSearch}>
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Rechercher"
-              aria-label="Search"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button className="btn btn-search" type="submit" id="navSearch">OK</button>
+          <form className="d-flex" onSubmit={handleSearchSubmit}>
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Nom, ville, spécialité..."
+                aria-label="Search"
+                value={search}
+                onChange={handleSearchChange}
+              />
           </form>
+          {suggestions.length > 0 && (
+              <ul className="list-group suggestions-list" id="navbarSearch">
+                {suggestions.map(suggestion => (
+                  <li
+                    key={suggestion.id}
+                    className="list-group-item list-group-item-action"
+                    onClick={() => handleSuggestionClick(suggestion)}
+                  >
+                    {suggestion.name} ({suggestion.location})
+                  </li>
+                ))}
+              </ul>
+            )}
         </div>
       </div>
     </nav>

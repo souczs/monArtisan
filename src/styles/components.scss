@@ -9,6 +9,21 @@
     font-size:1.1rem;
 }
 
+#navbarSearch {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 #navSearch {
     background-color: white;
     border:1px solid #82b864;
