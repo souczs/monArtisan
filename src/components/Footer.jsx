@@ -3,24 +3,58 @@ import '../styles/components.scss';
 
 function Footer() {
   return (
-    <footer className="footer bg-light py-4 border-top">
+    <footer className="footer bg-white py-4 border-top shadow-lg" id="footer">
       <div className="container">
         <div className="row">
 
-          {/* Section du menu pour les pages légales */}
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <h5>Informations Légales</h5>
+            <h5><strong>Informations légales</strong></h5>
             <ul className="list-unstyled">
-              <li><Link to="/mentions-legales" className="text-muted text-decoration-none">Mentions Légales</Link></li>
-              <li><Link to="/donnees-personnelles" className="text-muted text-decoration-none">Données Personnelles</Link></li>
-              <li><Link to="/accessibilite" className="text-muted text-decoration-none">Accessibilité</Link></li>
-              <li><Link to="/cookies" className="text-muted text-decoration-none">Gestion des cookies</Link></li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Page en cours de construction');
+                  }} 
+                  className="text-muted text-decoration-none"
+                >Mentions Légales</a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Page en cours de construction');
+                  }} 
+                  className="text-muted text-decoration-none"
+                >Données Personnelles</a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Page en cours de construction');
+                  }} 
+                  className="text-muted text-decoration-none"
+                >Accessibilité</a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Page en cours de construction');
+                  }} 
+                  className="text-muted text-decoration-none"
+                >Gestion des cookies</a>
+              </li>
             </ul>
           </div>
 
-          {/* Section de l'adresse et des contacts */}
           <div className="col-md-6 text-center text-md-end">
-            <h5>Contact</h5>
+            <h5><strong>Nous contacter</strong></h5>
             <address className="text-muted">
               101 cours Charlemagne<br />
               CS 20033<br />
