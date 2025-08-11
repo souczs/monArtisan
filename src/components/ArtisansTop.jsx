@@ -29,7 +29,7 @@ export default function ArtisansTop() {
               <button
                 className="btn btn-sm mb-3"
                 id="btn"
-                onClick={() => navigate(`/${artisan.name}`)}
+                onClick={() => navigate(`/artisan/${artisan.name}`)}
                 >
                 Voir la fiche
                 </button>
