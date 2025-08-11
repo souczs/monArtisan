@@ -18,7 +18,7 @@ function Footer() {
                     alert('Page en cours de construction');
                   }} 
                   className="text-muted text-decoration-none"
-                >Mentions Légales</a>
+                >Mentions légales</a>
               </li>
               <li>
                 <a 
@@ -28,7 +28,7 @@ function Footer() {
                     alert('Page en cours de construction');
                   }} 
                   className="text-muted text-decoration-none"
-                >Données Personnelles</a>
+                >Données personnelles</a>
               </li>
               <li>
                 <a 
