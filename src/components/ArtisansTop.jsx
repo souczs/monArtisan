@@ -21,7 +21,7 @@ export default function ArtisansTop() {
               {/* Génère 5 étoiles avec la couleur dorée et compare avec le nombre d'étoiles de l'artisan - Si moins de 5 étoiles, le reste est grisé */}
               <p>
                 {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} color={i < Math.round(artisan.note) ? 'gold' : '#ddd'} />
+                  <FaStar key={i} color={i < Math.round(artisan.note) ? "gold" : "#ddd"} />
                 ))}
               </p>
               <p><img src={Specialite} alt="Logo spécialité" id="box-spec" /> {artisan.specialty}</p>

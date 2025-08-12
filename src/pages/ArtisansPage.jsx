@@ -61,7 +61,7 @@ export default function FicheArtisan() {
         <h1><strong>{artisan.name}</strong></h1>
         <p>
           {[...Array(5)].map((_, i) => (
-            <FaStar key={i} color={i < Math.round(artisan.note) ? 'gold' : '#ddd'} />
+            <FaStar key={i} color={i < Math.round(artisan.note) ? "gold" : "#ddd"} />
           ))}
         </p>
         <p><img src={Specialite} alt="Logo spécialité" id="box-spec" /> {artisan.specialty}</p>
