@@ -8,7 +8,6 @@ function Header() {
   const [search, setSearch] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   
-  // 1. Ajoutez le hook useNavigate
   const navigate = useNavigate();
 
   const handleSearchChange = (e) => {
@@ -30,7 +29,7 @@ function Header() {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (search.length > 0) {
-      // Option : trouver le premier résultat et y naviguer
+      // Trouver le premier résultat et y naviguer
       const foundArtisan = artisansData.find(artisan => artisan.name.toLowerCase() === search.toLowerCase());
       if (foundArtisan) {
         navigate(`/artisan/${foundArtisan.id}`);
